@@ -29,6 +29,4 @@ RUN python3 /FiveM/getLatestCFXBuild.py
 RUN tar xf /FiveM/fx.tar.xz -C /FiveM
 RUN rm /FiveM/fx.tar.xz
 
-
-
-EXPOSE 30120/tcp 30120/udp
+ENTRYPOINT [ "sh", "/FiveM/run.sh" ]
