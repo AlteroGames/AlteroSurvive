@@ -1,18 +1,14 @@
 version: "3"
 services:
   fivem:
-    build: ./FiveM
-    container_name: FiveM
+    image: petchstudio/fivem
+    container_name: fivem
     stdin_open: true
     tty: true
     volumes:
-      - ./FiveM/server-data:/FiveM/server-data
-    environment:
-      GAME_CONFIG: ./FiveM/configs/server.cfg
-      SERVER_KEY: placeyourkeyhere
-      SRV_ADR: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/
-      UID: 99
-      GID: 100
+      - "./FiveM/server.cfg:/srv/server.cfg"
+      - "./FiveM/cfx-server-data/resources:/srv/resources"
+      - "./FiveM/cfx-server-data/cache:/srv/cache"
     ports:
       - "30120:30120/tcp"
       - "30120:30120/udp"
