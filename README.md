@@ -10,14 +10,21 @@ Survival Project in GTA 5
 3. Open terminal and write next commands
 
 ```
-    docker-compose build
-```
-
-```
     docker-compose up -d
 ```
+**Note**: When we received the changes from the repository, we need to rebuild the containers . 
 
-## How to use Postgres and PGADMIN
+P.S This information is not for layout designers
+
+To do this, enter:
+```
+   docker compose down
+```
+```
+  docker compose up -d
+```
+
+## How to use Postgres
 
 ### Postgres
 
