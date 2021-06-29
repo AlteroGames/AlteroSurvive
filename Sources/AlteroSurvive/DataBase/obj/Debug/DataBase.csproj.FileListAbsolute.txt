@@ -1,0 +1,9 @@
+C:\docker\AlteroSurvive\Sources\AlteroSurvive\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\docker\DataBase.net.dll.dll
+C:\docker\DataBase.net.dll.pdb
+C:\docker\AlteroSurvive\Sources\AlteroSurvive\DataBase\obj\Debug\DataBase.csproj.CopyComplete
+C:\docker\AlteroSurvive\FiveM\cfx-server-data\resources\[core]\database\DataBase.net.dll.config
+C:\docker\AlteroSurvive\FiveM\cfx-server-data\resources\[core]\database\DataBase.net.dll
+C:\docker\AlteroSurvive\FiveM\cfx-server-data\resources\[core]\database\DataBase.net.pdb
+C:\docker\AlteroSurvive\Sources\AlteroSurvive\DataBase\obj\Debug\DataBase.net.dll
+C:\docker\AlteroSurvive\Sources\AlteroSurvive\DataBase\obj\Debug\DataBase.net.pdb
