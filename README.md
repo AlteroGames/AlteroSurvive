@@ -10,6 +10,8 @@ Survival Project in GTA 5
 3. Open terminal and write next commands
 
 
+
+
 ```
     docker-compose up -d
 ```
