@@ -1,25 +1,13 @@
-name: Auto Request Review
-on:
-  pull_request_review:
-    types:
-      - submitted
+name: 'Approve review'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+
 jobs:
-  test:
+  test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
-    name: test
     steps:
-      - name: review
-        uses: buildsville/review-summary@v1
-        id: summary
+      - uses: actions/checkout@v2
+      - uses: ./
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: print review summary
-        run: |
-          echo "APPROVE: ${{ steps.summary.outputs.approved }}"
-          echo "REQUEST_CHANGES: ${{ steps.summary.outputs.changes_requested }}"
-          echo "COMMENT: ${{ steps.summary.outputs.commented }}"
-          echo "PENDING: ${{ steps.summary.outputs.pending }}"
-      - name: print if more than 2 approve
-        if: steps.summary.outputs.approved > 2
-        run: |
-          echo "Got more than 2 approve!!!"
+          token: ${{ secrets.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 }}
+          minimum_approvals: 1
