@@ -9,6 +9,7 @@ Survival Project in GTA 5
 2. Clone this repository
 3. Open terminal and write next commands
 
+
 ```
     docker-compose up -d
 ```
