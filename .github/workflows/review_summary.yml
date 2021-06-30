@@ -6,7 +6,7 @@ jobs:
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: necojackarc/auto-request-review/actions/checkout@v2
       - uses: ./
         with:
           token: ${{ secrets.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 }}
