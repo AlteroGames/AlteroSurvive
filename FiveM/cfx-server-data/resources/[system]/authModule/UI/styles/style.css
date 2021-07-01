@@ -343,7 +343,7 @@ template {
 
 body {
   font-family: 'PT Sans', sans-serif;
-  background-image: url("../img/auth-reg/background.png");
+  background-image: url("../assets/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
