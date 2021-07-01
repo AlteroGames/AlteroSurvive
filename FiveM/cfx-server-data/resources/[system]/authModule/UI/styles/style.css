@@ -353,6 +353,17 @@ body {
   color: #ffffff;
 }
 
+.auth-container,
+.register-containe {
+  margin-top: 20px;
+}
+.language-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
 .form-sign {
   position: relative;
   overflow: hidden;
@@ -384,24 +395,46 @@ body {
 
 .form-group {
   width: 100%;
+  margin-top: 30px;
 }
 
-.form-control {
-  width: 100%;
+.vs-input {
+  min-width: 354px;
   margin-bottom: 10px;
   background-color: #4D4A4A;
-  height: 40px;
+  height: 30px;
   border: none;
   border-radius: 4px;
   padding: 20px;
+  color: #ffffff;
 }
 
-.label {
+.vs-input__label {
   line-height: 18px;
   font-size: 14px;
   color: #ffffff;
 }
 
+.vs-select {
+  min-width: 200px;
+  margin-bottom: 10px;
+  
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+}
+.vs-select__input {
+  background-color: #4D4A4A;
+  color: #ffffff;
+}
+
+.vs-icon-arrow::after, .vs-icon-arrow::before {
+  background-color: #ffffff;
+}
+
+.links {
+  padding-left: 14px;
+}
 .btn {
   display: block;
   width: 100%;
@@ -409,15 +442,22 @@ body {
   margin-top: 20px;
   border-color: #CF8E0F;
   border-radius: 18px;
-  font-size: 14px;
+  font-size: 18px;
   color: #ffffff;
   background-color: #1E2023;
   cursor: pointer;
 }
 
-li {
+.btn:hover {
+  border-color: #941BCD;
+  transition: 0.4s ease-in-out;
+}
+
+
+ul {
   list-style-type: none;
-  display: inline;
+  display: flex;
+  justify-content: center;
 }
 
 .signin a,
@@ -427,10 +467,11 @@ li {
   cursor: pointer;
   padding-left: 20px;
   padding-right: 20px;
+  
 }
 
-.signin a:hover,
-.signup a:hover {
+.tabBorder {
   border-bottom: 3px solid #CA9308;
+  transition: 0.2s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
