@@ -49,6 +49,8 @@ const app = new Vue({
             registerPassword: '',
             isActiveLoginTab: true,
             isActiveRegisterTab: false,
+            listener: null,
+            showView: true
         }
     },
     computed: {
@@ -56,6 +58,20 @@ const app = new Vue({
             const regExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
             return regExp.test(String(this.registerEmail).toLowerCase());
         }
+    },
+    mounted() {
+        this.listener = window.addEventListener('message', (event) => {
+            const item = event.data || event.detail;
+            const data = JSON.stringify(item);
+            if (data.showui == true) {
+                this.showView = true;
+            } else {
+                this.showView = false;
+            }
+        }, false);
+    },
+    destroyed() {
+        window.removeEventListener('message', this.listener);
     },
     methods: {
         showLoginTab() {
@@ -70,7 +86,15 @@ const app = new Vue({
         },
         logIn() {
             if (this.authLogin.length > 3 && this.authPassword.length > 3) {
-                console.log('authSuccess');
+                let data = {
+                    login: this.authLogin,
+                    password: this.authPassword
+                };
+                axios.post(`https://${GetParentResourceName()}/get-data`, data, {
+                    headers: {
+                        'Content-Type': 'application/json; charset=UTF-8',
+                    },
+                }).then((response) => console.log(response.data));
             }
         },
         signIn() {

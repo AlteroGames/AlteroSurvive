@@ -341,7 +341,8 @@ template {
   box-sizing: border-box;
 }
 
-body {
+#app {
+  height: 100vh;
   font-family: 'PT Sans', sans-serif;
   background-image: url("../assets/background.png");
   background-repeat: no-repeat;
