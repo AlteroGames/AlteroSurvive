@@ -410,6 +410,10 @@ template {
   color: #ffffff;
 }
 
+.vs-input:focus {
+  background-color: #4D4A4A;
+}
+
 .vs-input__label {
   line-height: 18px;
   font-size: 14px;
