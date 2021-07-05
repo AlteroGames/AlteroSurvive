@@ -50,7 +50,11 @@
               </li>
             </ul>
           </div>
-          <div v-show="isLogin === true" class="auth-container">
+          <form
+            v-on:submit.prevent="logIn"
+            v-show="isLogin === true"
+            class="auth-container"
+          >
             <div class="form-group">
               <vs-input
                 class="login-input"
@@ -75,11 +79,13 @@
                 </template>
               </vs-input>
             </div>
-            <button class="btn" @click="logIn">
-              {{ $t("message.authButton") }}
-            </button>
-          </div>
-          <div v-show="isLogin === false" class="register-container">
+            <button class="btn">{{ $t("message.authButton") }}</button>
+          </form>
+          <form
+            v-on:submit.prevent="signIn"
+            v-show="isLogin === false"
+            class="register-container"
+          >
             <div class="form-group">
               <vs-input
                 class="login-input"
@@ -116,10 +122,8 @@
                 </template>
               </vs-input>
             </div>
-            <button class="btn" @click="signIn">
-              {{ $t("message.registerButton") }}
-            </button>
-          </div>
+            <button class="btn">{{ $t("message.registerButton") }}</button>
+          </form>
         </div>
       </div>
     </div>
