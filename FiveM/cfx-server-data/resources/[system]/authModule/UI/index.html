@@ -12,9 +12,9 @@
       content="initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -23,7 +23,9 @@
         <div class="language-container">
           <vs-select
             :placeholder='$t("message.selectLanguage")'
+            color="#fff"
             v-model="$i18n.locale"
+
           >
             <vs-option label="Русский" value="ru"> Русский </vs-option>
             <vs-option label="English" value="en"> English </vs-option>
@@ -123,7 +125,7 @@
               </vs-input>
             </div>
             <button class="btn">{{ $t("message.registerButton") }}</button>
-          </form>
+          </form> 
         </div>
       </div>
     </div>
