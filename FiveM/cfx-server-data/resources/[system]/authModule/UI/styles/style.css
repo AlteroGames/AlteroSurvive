@@ -44,7 +44,7 @@
 
 /* Авторизация/регистрация */
 .block {
-  padding-top: 100px;
+  padding-top: 50px;
   color: #ffffff;
 }
 .form-sign {
@@ -140,50 +140,6 @@ ul {
 .btn:hover {
   border-color: #941BCD;
   transition: 0.4s ease-in-out;
-}
-
-
-
-@media (min-width: 1200px) {
-  .vs-select,
-  .vs-select__options{
-    font-size: 20px;
-  }
-  .form-sign {
-    max-width: 500px;
-    min-width: 500px;
-  }
-  .header {
-    top: -9px;
-    left: 50px;
-    max-width: 380px;
-  }
-  .logo {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-
-  .signin a,
-  .signup a {
-    font-size: 27px;
-  }
-  .nav {
-    padding-bottom: 35px;
-  }
-  .vs-input {
-    height: 40px;
-    font-size: 20px;
-  }
-  .vs-input__label {
-    font-size: 18px;
-  }
-  .vs-input__message {
-    font-size: 14px;
-  }
-  .btn {
-    font-size: 20px;
-    margin-top: 20px;
-  }
 }
 
 @media (max-width: 992px) {
