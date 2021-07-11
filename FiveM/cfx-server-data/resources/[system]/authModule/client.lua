@@ -29,8 +29,10 @@ RegisterNUICallback("get-data", function(data)
     local login = data.login
     local password = data.password
 
-    showUI(false)
-    freezePerson(false)
+    uiEnabled = false
+
+    showUI(uiEnabled)
+    freezePerson(uiEnabled)
     chat(string.format("Login is: %s Password is: %s", login, password),
          {255, 255, 0})
 end)
