@@ -51,7 +51,7 @@
 
 /* Авторизация/регистрация */
 .block {
-  padding-top: 50px;
+  padding-top: 120px;
   color: #ffffff;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .nav {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .links {
@@ -121,19 +121,18 @@ ul {
 /* Формы ввода и кнопка */
 .form-group {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .vs-input,
 .vs-input:focus {
   min-width: 365px;
-  margin-bottom: 10px;
   background-color: #4D4A4A;
   color: #ffffff;
   height: 30px;
   border: none;
   border-radius: 4px;
-  padding: 20px;
+  padding: 18px;
 }
 
 .vs-input__label {
@@ -141,7 +140,8 @@ ul {
 }
 
 .vs-input__message {
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .btn {
@@ -163,13 +163,14 @@ ul {
   transition: 0.4s ease-in-out;
 }
 
-@media (max-height: 992px) {
+
+@media (max-height: 720px) {
+  .block {
+    padding-top: 140px;
+  }
   .vs-select {
     max-width: 100px;
   }
-}
-
-@media (max-height: 720px) {
   .form-sign {
     width: 350px;
   }
@@ -190,11 +191,19 @@ ul {
   .signup a {
     font-size: 20px;
   }
-
+  .vs-input__label {
+    font-size: 12px;
+  }
   .vs-input,
   .vs-input:focus {
     min-width: 265px;
-    height: 20px;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .vs-input__message {
+    font-size: 12px;
+  }
+  .btn {
+    height: 40px;
   }
 }
